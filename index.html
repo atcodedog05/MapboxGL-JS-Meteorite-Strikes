@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Meteorite strikes</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      #instrutions {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 25%;
+        z-index: 2;
+      }
+    </style>
+</head>
+<body>
+
+<style>
+body {
+  overflow: hidden;
+}
+
+body * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
+
+<div id='before' class='map'></div>
+<div id='after' class='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXRjb2RlZG9nMDUiLCJhIjoiY2pxcnU5cjVjMG9tNjQzbXZhd2loaHhnbSJ9.-e3Bp-lsfnDcp3AiZMKAGQ';
+
+
+var beforeMap = new mapboxgl.Map({
+    container: 'before',
+    style: 'mapbox://styles/atcodedog05/cjp5zggh72gy32sqjutdq4eyy',
+    center: [-50, 30],
+    zoom: 1.25
+});
+
+var afterMap = new mapboxgl.Map({
+    container: 'after',
+    style: 'mapbox://styles/atcodedog05/cjqs91h895ux92ro6u25pao3k',
+    center: [-50, 30],
+    zoom: 1.25
+});
+
+new mapboxgl.Compare(beforeMap, afterMap, {
+});
+
+</script>
+
+<div id="instrutions">
+  <div class="w3-card-4 w3-white">
+  <header class="w3-container w3-blue">
+  <h3>Meteorite strikes</h3>
+</header>
+
+<div class="w3-container">
+  <p>
+  <div class="w3-text-grey">
+  Heatmap visualizing meteorite strikes. 
+  <br><br>
+  The visualization is of <b>Political map</b> vs <b>Meteorite strike heatmap</b> 
+  <br>
+  </div>
+  <hr>
+  Use the slider to toggle views
+  </p>
+</div>
+
+<footer class="w3-container w3-blue">
+  <h5>
+    Designed Using MapboxGL JS
+    <br><br>
+    Find more projects by me on: <br>
+    <a href="https://atcodedog05.github.io/"
+    target="_blank">https://atcodedog05.github.io</a><br>
+    <a href="https://github.com/atcodedog05"
+    target="_blank">https://github.com/atcodedog05</a>
+  </h5>
+</footer>
+</div>
+</div>
+
+</body>
+</html>
