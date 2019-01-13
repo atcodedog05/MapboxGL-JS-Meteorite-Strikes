@@ -1,4 +1,4 @@
-# MapboxGL-JS-Meteorite-Strikes
+# MapboxGL JS Meteorite Strikes
 
 Heatmap visualising meteorite strikes.
 
